@@ -1,0 +1,20 @@
+Series and Patterns using oops
+1)	WAP in java to print and find the sum of following series:
+a)	1+1/2+1/3+1/4+1/5+…+1/n find the sum of this series
+b)	1+1/x+1/x^2+1/x^3+…...+1/x^n find the sum of this series
+c)	1+1/2! +1/3! +…...+ 1/n! find the sum.
+d)	1+2^3+3^3+……n^3.
+2)	Find all 4-digit numbers which satisfies the condition that, square of (first two digit last two digit) =original number. E.g., if a number is 3025 then (30+25) ^2=3025.
+3)	Input any number and reduce it to single digit by adding all its digits repeatedly.
+4)	Multiply all digits of a number till a single digit is found. Zeros should be ignored from the numbers, E.g., if the number is 406, then result should be 8. (4*6),(2*4=8)
+6) Generate the following pattern
+ 10001
+01010
+00100
+01010
+10001
+54321
+5432
+543
+54
+5

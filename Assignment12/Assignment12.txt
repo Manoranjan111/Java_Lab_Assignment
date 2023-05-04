@@ -1,0 +1,15 @@
+Q1 WAP in java to create two classes such as 2D Array and 1D Array
+    Members of 2D Array are:
+a> One 2D Array
+b> Constructor to allocate Memory size(2 X n) for the array.
+c> Input Data into the array
+d> Display the array Elemnet in Row Wise
+e> Split the array into two different arrays and store then in the array available in two different objects of class OneArray.
+f> Add the arrays(m X N martices) of two objects of 2D Array class
+g> Multiply the arrays(m X n) of two objects of 2D Array class
+    Members of 1D Array class are:
+    a>One 1D Array
+    b>Constructor to allocate memory of size (n) has the column size of 2D Array class
+    c> Show the Array
+
+Q2 Modify the above program to create same (m) no of array of objects of 1D Array as the no of rows available in the array (m X n) of 2D Array.Then add another method in 2D Array class that can distribute all rows of the 2D array of 2D Array class into each objects of 1D Array class.
