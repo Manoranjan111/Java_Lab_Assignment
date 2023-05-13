@@ -1,8 +1,6 @@
 
 // package Assignment12;
 import java.util.Scanner;
-
-// package Assignment12;
 // Q1 WAP in java to create two classes such as 2D Array and 1D Array
 //     Members of 2D Array are:
 // a> One 2D Array
