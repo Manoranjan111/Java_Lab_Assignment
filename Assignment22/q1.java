@@ -1,4 +1,3 @@
-// package Assignment22;
 // Define Exceptions VowelException, BlankException, ExitException to restrict
 // the input of vowel, space and ‘X’. Write another class TestException which reads
 // a character from command line. If it is a vowel, throw VowelException, if it is a
@@ -7,37 +6,64 @@
 // character”.
 import java.util.Scanner;
 
-public class q1 {
-
-    class VowelException extends Exception {
-        public VowelException() {
-            super("Invalid input: Vowels not allowed!");
-        }
-
-        public VowelException(String message) {
-            super(message);
-        }
+class VowelException extends Exception {
+    public VowelException() {
+        super("VowelException: Vowel not allowed.");
     }
-
-    public class Main {
-        public static void checkInput(String input) throws VowelException {
-            if (input.matches(".*[AEIOUaeiou].*")) {
-                throw new VowelException();
-            }
-        }
-
-        public static void main(String[] args) {
-            Scanner scanner = new Scanner(System.in);
-            System.out.print("Enter a string: ");
-            String input = scanner.nextLine();
-
-            try {
-                checkInput(input);
-                System.out.println("Valid input!");
-            } catch (VowelException e) {
-                System.out.println("Exception caught: " + e.getMessage());
-            }
-        }
-    }
-
 }
+
+class BlankException extends Exception {
+    public BlankException() {
+        super("BlankException: Blank space not allowed.");
+    }
+}
+
+class ExitException extends Exception {
+    public ExitException() {
+        super("ExitException: Program terminated.");
+    }
+}
+
+class q1 {
+
+    public static char readCharacter() {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter a character: ");
+            return scanner.nextLine().charAt(0);
+        }  
+    }
+    
+    public static boolean isVowel(char ch) {
+        ch = Character.toLowerCase(ch);
+        return ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u';
+    }
+    
+    public static boolean isBlank(char ch) {
+        return Character.isWhitespace(ch);
+    }
+    public static void main(String[] args) {
+        try {
+            char ch = readCharacter();
+            
+            if (isVowel(ch)) {
+                throw new VowelException();
+            } else if (isBlank(ch)) {
+                throw new BlankException();
+            } else if (ch == 'X') {
+                throw new ExitException();
+            } else {
+                System.out.println("Valid character");
+            }
+        } catch (VowelException e) {
+            System.out.println(e.getMessage());
+        } catch (BlankException e) {
+            System.out.println(e.getMessage());
+        } catch (ExitException e) {
+            System.out.println(e.getMessage());
+            System.exit(0);
+        }
+    }
+    
+    
+}
+
