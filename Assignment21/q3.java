@@ -1,8 +1,6 @@
 // package Assignment21;
 // Write a program to show the use of NullPointerException.
 
-import javax.lang.model.type.NullType;
-
 public class q3 {
     public static void main(String[] args) {
 
